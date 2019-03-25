@@ -129,6 +129,7 @@ public class HangerView extends View {
         canvasBitmap.drawRect(outerRectangle, paint);
 
         paint.setColor(getResources().getColor(cardColor));
+       // paint.setStyle(Paint.Style.FILL);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(stroke);
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_OVER));
