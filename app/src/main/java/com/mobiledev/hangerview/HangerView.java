@@ -114,7 +114,7 @@ public class HangerView extends View {
      */
     private Bitmap bitmapDraw() {
         Bitmap bitmap = Bitmap.createBitmap(cardWidth, cardHeight, Bitmap.Config.ARGB_8888);
-        bitmap.eraseColor(Color.TRANSPARENT);
+        bitmap.eraseColor(Color.GRAY);
 
         Canvas canvasBitmap = new Canvas(bitmap);
         canvasBitmap.drawColor(getResources().getColor(cardColor));
@@ -129,8 +129,8 @@ public class HangerView extends View {
         canvasBitmap.drawRect(outerRectangle, paint);
 
         paint.setColor(getResources().getColor(cardColor));
-       // paint.setStyle(Paint.Style.FILL);
-        paint.setStyle(Paint.Style.STROKE);
+        paint.setStyle(Paint.Style.FILL);
+      //  paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(stroke);
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_OVER));
         canvasBitmap.drawCircle(centerX, centerY, cardRadiusOuter, paint);
